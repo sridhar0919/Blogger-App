@@ -1,0 +1,9 @@
+.footer-totalcontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #1d2b34;;
+  padding: 10px 0;
+  color: peachpuff;
+  font-size: 15px;
+}

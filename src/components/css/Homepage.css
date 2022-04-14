@@ -1,0 +1,152 @@
+.home-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.527)),
+    url('../images/photo-1432821596592-e2c18b78144f.avif') no-repeat top
+      center/cover;
+  height: 350px;
+}
+
+.home-headtop {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: peachpuff;
+}
+
+.home-headtop > div:nth-child(1) {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.home-headtop > div:nth-child(2) {
+  font-size: 20px;
+  padding: 0;
+  margin-top: -40px;
+}
+
+.home-category-option {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.home-category-option > form > select {
+  padding: 8px 5px;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.home-category-option > form > button {
+  padding: 8px 20px;
+  border: none;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ff8000;
+  color: white;
+}
+
+.home-blog-button {
+  margin-left: 100px;
+}
+
+.home-category-option > form > button:hover {
+  background-color: #ff9224;
+}
+
+/* Main content with cards */
+.home-maincontent {
+  padding: 50px 80px;
+}
+
+.home-contentinsidemain {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  
+}
+
+.home-card {
+  margin-right: 50px;
+  margin-bottom: 50px;
+  background-color: #e5e4e2;
+  width: 350px;
+  position: relative;
+  height: 575px;
+}
+
+.home-card > img {
+  width: 350px;
+  height: 275px;
+  border-radius: 5px;
+}
+.homecard-category {
+  margin: 10px 0;
+}
+
+.homecard-category > p {
+  display: inline;
+  background-color: #4583aa;
+  padding: 7px 20px;
+  color: peachpuff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.home-card-content {
+  padding: 10px;
+}
+
+.home-card-content > p {
+  width: 300px;
+  overflow-wrap: break-word;
+}
+
+.home-card-button {
+  margin: 10px 0;
+  
+}
+
+.home-card-button > button {
+  padding: 15px 20px;
+  border: none;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ff8000;
+  color: white;
+  position: absolute;
+   bottom: 20px;
+   /* left: 100px; */
+}
+
+.delete-button {
+  padding: 15px 20px;
+  border: none;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ff8000;
+  color: white;
+  position: absolute;
+   bottom: 20px;
+   left: 200px;
+}
+
+.home-card-contentfull {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+   /* to specify the number of lines you want the text to run through... */
+  -webkit-line-clamp: 3;
+   /* hide the overflowing text, i.e, texts that did not fit in to the box */
+   overflow: hidden;
+}
+
