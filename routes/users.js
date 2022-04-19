@@ -115,4 +115,20 @@ router.get('/fetch-currentblog/:id', async (req, res) => {
     });
 });
 
+// fetch blog based on category
+router.post('/getblog-category/:id', async (req, res) => {
+  Item.find({
+    _id: req.params.id,
+  })
+    .then((doc) => {
+      // console.log(doc);
+      res.send(
+        doc[0].listOfBlogs.filter((blog) => blog.category == req.body.category)
+      );
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+});
+
 module.exports = router;

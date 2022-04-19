@@ -57,4 +57,16 @@ router.get('/get-blog/:id', async (req, res) => {
     });
 });
 
+// Get blog by category
+router.post('/fetchblog-category', async (req, res) => {
+  homeItem
+    .find()
+    .then((doc) => {
+      res.send(doc.filter((blog) => blog.category == req.body.category));
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+});
+
 module.exports = router;
