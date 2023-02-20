@@ -52,3 +52,213 @@
   margin-left: 20px;
 }
 
+@media (min-width: 320px) and (max-width: 374px) {
+  .blogdiplay-totalcontent {
+    margin: 50px 20px;
+    text-align: center;
+  }
+
+  .blogdiplay-totalcontent > p:nth-child(1) {
+    color: grey;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  .blogdiplay-totalcontent > h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .blogdisplay-category {
+    display: inline;
+    background-color: #4583aa;
+    padding: 7px 20px;
+    /* margin-top: 50px; */
+    margin-bottom: 70px;
+    color: peachpuff;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .blogdisplay-mainimg > img {
+    width: 275px;
+    height:300px;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+
+  .blogdisplay-wordcontent > p {
+    width: 880px;
+    font-style: Times;
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  .blogdisplay-backbutton > button {
+    padding: 15px 20px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 500px) {
+  .blogdiplay-totalcontent {
+    margin: 50px 35px;
+    text-align: center;
+  }
+
+  .blogdiplay-totalcontent > p:nth-child(1) {
+    color: grey;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  .blogdiplay-totalcontent > h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .blogdisplay-category {
+    display: inline;
+    background-color: #4583aa;
+    padding: 7px 20px;
+    /* margin-top: 50px; */
+    margin-bottom: 70px;
+    color: peachpuff;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .blogdisplay-mainimg > img {
+    width: 320px;
+    height:300px;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+
+  .blogdisplay-wordcontent > p {
+    width: 880px;
+    font-style: Times;
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  .blogdisplay-backbutton > button {
+    padding: 15px 20px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  .blogdiplay-totalcontent {
+    margin: 50px 35px;
+    text-align: center;
+  }
+
+  .blogdiplay-totalcontent > p:nth-child(1) {
+    color: grey;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .blogdiplay-totalcontent > h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .blogdisplay-category {
+    display: inline;
+    background-color: #4583aa;
+    padding: 7px 20px;
+    /* margin-top: 50px; */
+    margin-bottom: 70px;
+    color: peachpuff;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+
+  .blogdisplay-mainimg > img {
+    width: 450px;
+    height:300px;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+
+  .blogdisplay-wordcontent > p {
+    width: 880px;
+    font-style: Times;
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  .blogdisplay-wordcontent > p {
+    width: 880px;
+    font-style: Times;
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  .blogdisplay-backbutton > button {
+    padding: 15px 20px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .blogdiplay-totalcontent {
+    margin: 20px 30px;
+    text-align: center;
+  }
+
+  .blogdisplay-mainimg > img {
+    width: 700px;
+    height:400px;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+
+  .blogdisplay-wordcontent > p {
+    width: 880px;
+    font-style: Times;
+    overflow-wrap: break-word;
+    text-align: justify;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blogdiplay-totalcontent {
+    margin: 20px 50px;
+    text-align: center;
+  }
+}

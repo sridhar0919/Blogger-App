@@ -12,11 +12,12 @@ export default function Homepage() {
   const navigate = useNavigate();
   var id = sessionStorage.getItem('user_id');
   const [homeItems, setHomeItems] = useState(null);
+  const [noBlog, setNoBlog] = useState(false);
   const toastId = React.useRef(null);
 
   const fetchData = () => {
     axios
-      .get('http://localhost:4000/fetch-blog')
+      .get('https://blogger-app-gomr.onrender.com/fetch-blog')
       .then((res) => {
         console.log(res);
         setHomeItems(res.data);
@@ -26,8 +27,11 @@ export default function Homepage() {
 
   const fetchUserData = () => {
     axios
-      .get(`http://localhost:4000/users/fetch-userblog/${id}`)
+      .get(`https://blogger-app-gomr.onrender.com/users/fetch-userblog/${id}`)
       .then((res) => {
+        if (res.data.length == 0) {
+          setNoBlog(true);
+        }
         setHomeItems(res.data);
       })
       .catch((err) => console.log(err));
@@ -36,9 +40,52 @@ export default function Homepage() {
   const deleteHandler = (title) => {
     console.log(title);
     axios
-      .put(`http://localhost:4000/users/delete-blog/${id}?blogTitle=${title}`)
+      .put(
+        `https://blogger-app-gomr.onrender.com/users/delete-blog/${id}?blogTitle=${title}`
+      )
       .then((res) => {
-        toast.success('Blog deleted');
+        toast.success('Blog deleted', { onClick: window.location.reload() });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const fetchBlogCategory = (blogCategory) => {
+    axios
+      .post(
+        `https://blogger-app-gomr.onrender.com/users/getblog-category/${id}`,
+        {
+          category: blogCategory,
+        }
+      )
+      .then((res) => {
+        if (res.data.length == 0) {
+          setNoBlog(true);
+          setHomeItems(null);
+        } else {
+          setNoBlog(false);
+          setHomeItems(res.data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const fetchHomeBlogCategory = (blogCategory) => {
+    axios
+      .post(`https://blogger-app-gomr.onrender.com/fetchblog-category`, {
+        category: blogCategory,
+      })
+      .then((res) => {
+        if (res.data.length == 0) {
+          setNoBlog(true);
+          setHomeItems(null);
+        } else {
+          setNoBlog(false);
+          setHomeItems(res.data);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -51,7 +98,7 @@ export default function Homepage() {
     } else {
       fetchData();
     }
-  }, [homeItems]);
+  }, []);
 
   return (
     <div>
@@ -67,21 +114,30 @@ export default function Homepage() {
           </div>
         </div>
         <div className="home-category-option">
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (id) {
+                fetchBlogCategory(e.target[0].value);
+              } else {
+                fetchHomeBlogCategory(e.target[0].value);
+              }
+            }}
+          >
             <select>
               <option>Search By Category</option>
-              <option value="food">Food</option>
-              <option value="travel">Travel</option>
-              <option value="health">Health</option>
-              <option value="lifestyle">Lifestyle</option>
-              <option value="fashion">Fashion</option>
-              <option value="photography">Photography</option>
-              <option value="music">Music</option>
-              <option value="art">Art</option>
-              <option value="sports">Sports</option>
-              <option value="movie">Movie</option>
-              <option value="news">News</option>
-              <option value="sports">Finance</option>
+              <option value="Food">Food</option>
+              <option value="Travel">Travel</option>
+              <option value="Health">Health</option>
+              <option value="Lifestyle">Lifestyle</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Photography">Photography</option>
+              <option value="Music">Music</option>
+              <option value="Art">Art</option>
+              <option value="Sports">Sports</option>
+              <option value="Movie">Movie</option>
+              <option value="News">News</option>
+              <option value="Finance">Finance</option>
             </select>
             <button>GO</button>
             <button
@@ -101,6 +157,27 @@ export default function Homepage() {
         </div>
       </section>
       <article className="home-maincontent">
+        {noBlog ? (
+          <div className="noblogfound-div">
+            <h1>NO BLOGS FOUND!! </h1>
+            <h4>CLICK ON THE BELOW BUTTON TO START CREATING YOUR OWN BLOG!!</h4>
+            <button
+              onClick={(e) => {
+                if (id) {
+                  navigate(`/create-blog/${id}`);
+                } else {
+                  e.preventDefault();
+                  navigate('/');
+                  toast.error('Login first to create your blog!!');
+                }
+              }}
+            >
+              CREATE YOUR BLOG
+            </button>
+          </div>
+        ) : (
+          <></>
+        )}
         <div className="home-contentinsidemain">
           {homeItems &&
             homeItems.map((item, index) => {

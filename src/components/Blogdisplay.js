@@ -5,6 +5,7 @@ import blogDisplayImg from './images/photo-1432821596592-e2c18b78144f.avif';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import Footer from './Footer';
 
 export default function Blogdisplay() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function Blogdisplay() {
 
   const fetchData = () => {
     axios
-      .get(`http://localhost:4000/get-blog/${id}`)
+      .get(`https://blogger-app-gomr.onrender.com/get-blog/${id}`)
       .then((res) => {
         console.log(res);
         setItem(res.data);
@@ -30,7 +31,7 @@ export default function Blogdisplay() {
     console.log(blogTitle);
     axios
       .get(
-        `http://localhost:4000/users/fetch-currentblog/${id}?title=${blogTitle}`
+        `https://blogger-app-gomr.onrender.com/users/fetch-currentblog/${id}?title=${blogTitle}`
       )
       .then((res) => {
         console.log(res);
@@ -74,6 +75,7 @@ export default function Blogdisplay() {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

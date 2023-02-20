@@ -58,6 +58,24 @@
   background-color: #ff9224;
 }
 
+/* No blog found section */
+.noblogfound-div {
+  text-align: center;
+}
+
+
+.noblogfound-div > button {
+  padding: 8px 20px;
+  border: none;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ff8000;
+  color: white;
+}
+
 /* Main content with cards */
 .home-maincontent {
   padding: 50px 80px;
@@ -67,7 +85,6 @@
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
-  
 }
 
 .home-card {
@@ -150,3 +167,364 @@
    overflow: hidden;
 }
 
+@media (min-width: 320px) and (max-width: 374px) {
+
+  .home-headtop {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: peachpuff;
+  }
+
+  .home-headtop > div:nth-child(1) {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .home-headtop > div:nth-child(2) {
+    font-size: 15px;
+    padding: 0;
+    margin-top: -40px;
+  }
+
+  .home-category-option {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+
+  .home-category-option > form > select {
+    padding: 8px 5px;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 13px;
+  }
+  
+  .home-category-option > form > button {
+    padding: 8px 20px;
+    border: none;
+    margin: 10px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+  }
+
+  .home-maincontent {
+    padding: 50px 10px;
+  }
+  
+  .home-contentinsidemain {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .home-card {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    background-color: #e5e4e2;
+    width: 250px;
+    position: relative;
+    height: 575px;
+  }
+
+  .home-card > img {
+    width: 250px;
+    height: 275px;
+    border-radius: 5px;
+  }
+  .homecard-category {
+    margin: 10px 0;
+  }
+  
+  .homecard-category > p {
+    display: inline;
+    background-color: #4583aa;
+    padding: 7px 20px;
+    color: peachpuff;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .home-card-content {
+    padding: 10px;
+  }
+  
+  .home-card-content > p {
+    width: 200px;
+    font-size: 15px;
+    overflow-wrap: break-word;
+  }
+  
+  .home-card-button {
+    margin: 10px 0;
+    
+  }
+  
+  .home-card-button > button {
+    padding: 15px 10px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+    position: absolute;
+     bottom: 20px;
+     /* left: 100px; */
+  }
+  
+  .delete-button {
+    padding: 15px 10px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+    position: absolute;
+     bottom: 20px;
+     left: 150px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 500px) {
+  .home-headtop {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: peachpuff;
+  }
+
+  .home-headtop > div:nth-child(1) {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .home-headtop > div:nth-child(2) {
+    font-size: 15px;
+    padding: 0;
+    margin-top: -40px;
+  }
+
+  .home-category-option {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+
+  .home-category-option > form > select {
+    padding: 8px 5px;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 13px;
+  }
+  
+  .home-category-option > form > button {
+    padding: 8px 20px;
+    border: none;
+    margin: 10px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+  }
+
+  .home-maincontent {
+    padding: 50px 10px;
+  }
+  
+  .home-contentinsidemain {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .home-card {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    background-color: #e5e4e2;
+    width: 300px;
+    position: relative;
+    height: 575px;
+  }
+
+  .home-card > img {
+    width: 300px;
+    height: 275px;
+    border-radius: 5px;
+  }
+  .homecard-category {
+    margin: 10px 0;
+  }
+  
+  .homecard-category > p {
+    display: inline;
+    background-color: #4583aa;
+    padding: 7px 20px;
+    color: peachpuff;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  
+  .home-card-content {
+    padding: 10px;
+  }
+  
+  .home-card-content > p {
+    width: 250px;
+    font-size: 15px;
+    overflow-wrap: break-word;
+  }
+  
+  .home-card-button {
+    margin: 10px 0;
+    
+  }
+  
+  .home-card-button > button {
+    padding: 15px 10px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+    position: absolute;
+     bottom: 20px;
+     /* left: 100px; */
+  }
+  
+  .delete-button {
+    padding: 15px 10px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+    position: absolute;
+     bottom: 20px;
+     left: 150px;
+  }
+
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+
+  .home-card-content > p {
+    width: 350px;
+    font-size: 15px;
+    overflow-wrap: break-word;
+  }
+
+  .home-headtop {
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: peachpuff;
+  }
+
+  .home-headtop > div:nth-child(1) {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .home-headtop > div:nth-child(2) {
+    font-size: 15px;
+    padding: 0;
+    margin-top: -40px;
+  }
+
+  .home-category-option {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+
+  .home-category-option > form > button {
+    padding: 8px 20px;
+    border: none;
+    margin: 10px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+  }
+
+  .home-maincontent {
+    padding: 50px 50px;
+  }
+
+  .home-contentinsidemain {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ 
+
+  .home-contentinsidemain {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .home-card {
+    margin-right: 80px;
+    margin-bottom: 50px;
+    background-color: #e5e4e2;
+    width: 450px;
+    position: relative;
+    height: 575px;
+  }
+
+  .home-card > img {
+    width: 450px;
+    height: 275px;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .home-contentinsidemain {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+}

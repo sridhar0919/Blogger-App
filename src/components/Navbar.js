@@ -12,7 +12,7 @@ export default function Navbar() {
   const onLoginSuccess = async (res) => {
     console.log('Login Success:', res.profileObj);
     await axios
-      .post('http://localhost:4000/users/add-user', {
+      .post('https://blogger-app-gomr.onrender.com/users/add-user', {
         userDetails: res.profileObj,
       })
       .then((res) => {

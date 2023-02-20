@@ -6,4 +6,41 @@
   padding: 10px 0;
   color: peachpuff;
   font-size: 15px;
+  margin-top: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .footer-totalcontent {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d2b34;;
+    padding: 10px 20px;
+    color: peachpuff;
+    font-size: 12px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 500px) {
+  .footer-totalcontent {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d2b34;;
+    padding: 10px 20px;
+    color: peachpuff;
+    font-size: 12px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  .footer-totalcontent {
+    display: flex;
+    flex-direction: row;
+    background-color: #1d2b34;;
+    padding: 20px 20px;
+    color: peachpuff;
+    font-size: 12px;
+    margin-top: 50px;
+  }
 }

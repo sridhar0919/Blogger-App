@@ -9,6 +9,7 @@ import dateFormat from 'dateformat';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 export default function Createblog() {
   const [item, setItem] = useState({
@@ -22,27 +23,34 @@ export default function Createblog() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const onSubmitHandler = () => {
+  const onSubmitHandler = (e) => {
     axios
-      .post(`http://localhost:4000/users/add-blog/${id}`, item)
-      .then((res) => {})
+      .post(`https://blogger-app-gomr.onrender.com/users/add-blog/${id}`, item)
+      .then((res) => {
+        // setItem({
+        //   ...item,
+        //   blogTitle: '',
+        //   category: '',
+        //   image: '',
+        //   content: '',
+        // });
+      })
       .catch((err) => console.log(err));
 
     toast.success('Blog added successfully');
-    navigate('/');
   };
 
   // const onSubmitHandler = (e) => {
   //   e.preventDefault();
   //   axios
-  //     .post('http://localhost:4000/upload-blog', item)
+  //     .post('https://bloggerapp11.herokuapp.com/upload-blog', item)
   //     .then((res) => console.log(res))
   //     .catch((err) => console.log(err));
   // };
 
   // const fetchData = () => {
   //   axios
-  //     .get('http://localhost:4000/fetch-blog')
+  //     .get('https://bloggerapp11.herokuapp.com/fetch-blog')
   //     .then((res) => {
   //       setItems(res.data);
   //     })
@@ -57,6 +65,15 @@ export default function Createblog() {
     <div>
       <ToastContainer />
       <Navbar />
+      <div className="createblog-backbutton">
+        <button
+          onClick={() => {
+            navigate('/');
+          }}
+        >
+          <i class="fa-solid fa-arrow-left-long"></i>&nbsp;&nbsp;Go Back
+        </button>
+      </div>
       <div className="createblog-form-container">
         <div>
           <img src={createBlogImg} alt="" className="createblog-img" />
@@ -66,7 +83,12 @@ export default function Createblog() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              onSubmitHandler();
+              console.log(e);
+              e.target[0].value = '';
+              e.target[1].value = 'select category';
+              e.target[2].value = '';
+              e.target[3].value = '';
+              onSubmitHandler(e);
             }}
           >
             <input
@@ -82,7 +104,7 @@ export default function Createblog() {
                 setItem({ ...item, category: e.target.value });
               }}
             >
-              <option>Select Category</option>
+              <option value="select category">Select Category</option>
               <option value="Food">Food</option>
               <option value="Travel">Travel</option>
               <option value="Health">Health</option>
@@ -116,6 +138,7 @@ export default function Createblog() {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
